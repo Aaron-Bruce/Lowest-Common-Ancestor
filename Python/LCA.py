@@ -74,24 +74,24 @@ class TestCases(unittest.TestCase):
     # Test case for tree empty node
     def test_empty_node(self):
         root = None
-        self.assertEquals(findLCA(root, 1, 1), -1)
+        self.assertEquals(findLCA(root, 3, 3), -1)
 
     # Test case for tree containing one node
     def test_one_node(self):
         root = Node(1)
-        self.assertEqual(findLCA(root, 1, 1), 1)
+        self.assertEqual(findLCA(root, 3, 3), 3)
 
     # Test case for tree containing 2 nodes (root and left)
     def test_two_nodes_a(self):
-        root = Node(1)
-        root.left = Node(2)
-        self.assertEqual(findLCA(root, 1, 2), 1)
+        root = Node(3)
+        root.left = Node(4)
+        self.assertEqual(findLCA(root, 3, 4), 3)
 
     # Test case for tree containing 2 nodes (root and right)
     def test_two_nodes_b(self):
-        root = Node(1)
-        root.right = Node(2)
-        self.assertEqual(findLCA(root, 1, 2), 1)
+        root = Node(3)
+        root.right = Node(4)
+        self.assertEqual(findLCA(root, 3, 4), 3)
 
     # Test case for tree containing 7 nodes (evenly balanced)
     def test_balanced_tree(self):
